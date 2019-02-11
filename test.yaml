@@ -2,29 +2,10 @@ libraries:
   - ~/Projects/openpipe-plugins/ckan      # Only need for local development
   - https://github.com/openpipe-plugins/ckan
 
-# Leveraging YAML anchors for steps configuration deduplication
-config: &config_data
-  url: http://data.europa.eu/euodp/data/
-
 start:
-  - copy to segment:
-    - test_group_list
-    - test_package_list
-
-test_group_list:
   - collect from ckan:
-      <<: *config_data
+      url: http://data.europa.eu/euodp/data/
       action: group_list
-  - print: Name is $_['name']$
 
-test_package_list:
+  - pprint:
 
-  - collect from ckan:
-      <<: *config_data
-      action: package_list
-
-  - collect from ckan:
-      <<: *config_data
-      action: package_show
-      arguments:
-        id: $_$
