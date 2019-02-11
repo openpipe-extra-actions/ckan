@@ -11,6 +11,11 @@ class Plugin(PluginRuntime):
         self.ckan = RemoteCKAN(config['url'])
 
     def on_input(self, item):
-        data = self.ckan.call_action(self.config['action'])
-        for new_item in data:
-            self.put(new_item)
+        action = self.config['action']
+        args = self.config.get('arguments', {})
+        data = self.ckan.call_action(action, args)
+        if isinstance(data, list):
+            for new_item in data:
+                self.put(new_item)
+        else:
+            self.put(data)
