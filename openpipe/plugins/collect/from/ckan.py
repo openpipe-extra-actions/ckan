@@ -4,8 +4,8 @@
 from openpipe.engine import PluginRuntime
 from ckanapi import RemoteCKAN
 
-class Plugin(PluginRuntime):
 
+class Plugin(PluginRuntime):
 
     def on_start(self, config):
         self.ckan = RemoteCKAN(config['url'])
