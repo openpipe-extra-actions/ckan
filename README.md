@@ -24,7 +24,7 @@ Requirements
 ## How to test
 
 ```bash
-openpipe run https://github.com/openpipe-plugins/ckan/test.yaml
+openpipe run https://github.com/openpipe-plugins/ckan/blob/master/test.yaml
 ```
 
 ## How to use

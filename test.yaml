@@ -1,6 +1,6 @@
 libraries:
   - ~/Projects/openpipe-plugins/ckan      # Only need for local development
-  - https://github.com/openpipe-plugins
+  - https://github.com/openpipe-plugins/ckan
 
 start:
   - collect from ckan:
