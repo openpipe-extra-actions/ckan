@@ -11,7 +11,7 @@ class Plugin(PluginRuntime):
         "ignore_not_found": False
     }
 
-    def on_start(self, config):
+    def on_start(self, config, segment_resolver):
         self.ckan = RemoteCKAN(config['url'])
 
     def on_input(self, item):
