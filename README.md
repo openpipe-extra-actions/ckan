@@ -17,14 +17,13 @@ The following features are available:
 Requirements
 ------------
 ```sh
-    pip install --user openpipe
-    pip install --user ckanapi
+pip install --user -r requirements
 ```
 
 ## How to test
 
 ```bash
-openpipe run https://github.com/openpipe-plugins/ckan/blob/master/test.yaml
+openpipe test read from ckan
 ```
 
 ## How to use

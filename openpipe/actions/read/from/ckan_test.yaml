@@ -1,0 +1,8 @@
+
+start:
+    - read from ckan:
+        url: http://data.europa.eu/euodp/data/
+        action: group_list
+
+    - pprint:
+
