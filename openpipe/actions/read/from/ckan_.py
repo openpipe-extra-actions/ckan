@@ -7,6 +7,8 @@ from ckanapi import RemoteCKAN, errors
 
 class Action(ActionRuntime):
 
+    category = "Data Sourcing"
+
     required_config = """
         url:     # URL for the CKAN endpoint
         action:  # CKAN action to perform
